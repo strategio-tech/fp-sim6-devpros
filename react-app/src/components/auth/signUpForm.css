@@ -1,0 +1,104 @@
+
+.signupErrors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+}
+
+
+.passwordInputRepeat{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.signupInputs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+
+.bio-signup{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+}
+
+.dontAccount{
+    display: inline;
+    font-size: 16px;
+    color: rgb(34, 34, 34);
+    padding-right: 5px;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.register{
+    display: inline;
+    font-size: 16px;
+    color: #5562f3;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.register:hover{
+    color: #0014f5;
+}
+
+.dontAccount{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.signup-btn{
+    display:inline-block;
+    padding: .35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:10px 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:300;
+    color:#0b0a0a;
+    text-align:center;
+    transition: all 0.2s;
+    animation: bouncy 5s infinite linear;
+    position: relative;
+    cursor: pointer;
+}
+
+@keyframes bouncy {
+    0%{top:0em}
+    40%{top:0em}
+    43%{top:-0.9em}
+    46%{top:0em}
+    48%{top:-0.4em}
+    50%{top:0em}
+    100%{top:0em;}
+}
+
+.signup-btn:hover{
+    background-color: #FFFFFF;
+    color: #000;
+}
+
+
+@media screen and (max-width: 768px){
+    .signup-btn{
+        display:block;
+        margin:0.4em auto;
+    }
+
+    .bio-signup{
+        display: none;
+    }
+}

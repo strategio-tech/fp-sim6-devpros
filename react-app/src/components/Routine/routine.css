@@ -1,0 +1,118 @@
+.routine-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.routine-header{
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.workout-plan-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+}
+.routine-workoutPlan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-bottom: 1px solid black;
+    -webkit-transition: all 0.8s ease-out;
+    text-decoration: none;
+    color: black;
+}
+
+.routine-workoutPlan:hover{
+    -webkit-transform: translateY(-20px);
+    -webkit-transition: all 0.8s ease-in-out;
+    -ms-transform: translateY(-20px);
+    transform: translateY(-20px);
+    box-shadow: 0 22px 43px rgba(0, 0, 0, 0.32);
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border-radius: 16px;
+    color: black;
+}
+
+
+
+
+
+.workout-plan-name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.delete-workout-plan{
+    display: flex;
+    margin-bottom: 5px;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.delete-workout-plan:hover{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}
+
+
+.delete-workout-button{
+    display: flex;
+    margin-bottom: 5px;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.delete-workout-button:hover{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}
+
+.modal-button{
+    display: flex;
+    margin-top: 5px;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
+.modal-button:hover{
+    background-color: #ff0000;
+    color: rgb(255, 255, 255);
+}

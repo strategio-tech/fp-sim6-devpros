@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.workout-header{
+    grid-area: workout-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    margin-top: 20px;
+    margin-bottom: 7px;
+}
+
+.workout-container{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    display: grid;
+    grid-template-areas:
+    "nav nav nav"
+    "workout-header workout-header workout-header"
+    "main main main"
+    ;
+    border: 2px solid black;
+    padding: 50px 50px;
+}
+
+
+
+.workout-name{
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+}
+
+
+.workout-container img{
+    padding: 100px 100px;
+    width: 100%;
+}
+
+
+.workout-button{
+    display: flex;
+    margin-bottom: 20px;
+    border: none;
+    font-family: 'Bebas Neue', cursive;
+    word-spacing: 1px;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.workout-button:hover{
+    background-color: #a2a2a2;
+    color: rgb(255, 255, 255);
+}
+
+.create-workout-plan-btn{
+    border: none;
+    background-color: white;
+    font-family: 'Pacifico', cursive;
+    margin-right: 10px;
+    margin-left: -30px;
+}
+
+.create-workout-plan-btn:hover{
+    color: #a2a2a2;
+}
+
+.workout-filter{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter-button{
+    border-radius: 25%;
+    background-color: white;
+    font-family: 'Pacifico', cursive;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+}
+
+.filter-button:hover{
+    background-color: #a2a2a2;
+    color: rgb(255, 255, 255);
+}
+
+.remove-filter-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25%;
+    background-color: white;
+    font-family: 'Pacifico', cursive;
+    margin-right: 10px;
+    font-size: 14px;
+    padding: 10px 10px 10px 10px;
+}
+
+.remove-filter-button:hover{
+    background-color: #a2a2a2;
+    color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 768px){
+    .workout-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "workout-header"
+        "main";
+    }
+
+    .workout-container img{
+        padding: 0px 0px;
+        width: 100%
+    }
+}
+
+.add-workout-btn{
+    border: none;
+    background-color: rgb(153, 153, 153);
+    font-family: 'Bebas Neue', cursive;
+    color:white;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    margin-bottom: 10px;
+}
+
+.add-workout-btn:hover{
+    background-color: #171717;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 480px){
+    .workout-container{
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "nav"
+        "workout-header"
+        "main";
+    }
+
+    .workout-container img{
+        padding: 0px 0px;
+        width: 100%
+    }
+}

@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Montserrat&family=Noto+Sans&family=Work+Sans:wght@300&display=swap');
+
+
+
+.about{
+    display: flex;
+    position: relative;
+    font-family: 'Noto Sans', sans-serif;
+    padding-bottom: 35px;
+}
+
+.split-left{
+    position: absolute;
+    left: 0;
+    flex: 1;
+    width: 50%;
+    height: 100%;
+
+}
+
+.split-right{
+    position: absolute;
+    right: 0;
+    flex: 1;
+    width: 50%;
+    height: 100%;
+    margin-right: 25px;
+}
+
+
+.about img{
+    position: absolute;
+    width: 35%;
+    border-radius: 50%;
+    right: 50px;
+}
+
+.about h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-family: 'Notosans', sans-serif;
+}
+
+.about-app{
+    margin-right: 500px;
+}
+
+.about-me{
+    display: flex;
+    margin-left: 25px;
+    word-break: keep-all;
+    width: 50%;
+}
+
+
+.about-text{
+    display: flex;
+    margin-left: 25px;
+    word-break: keep-all;
+    width: 50%;
+}
+
+
+
+.typewriter h1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 20px auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .05em; /* Adjust as needed */
+    animation:
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+    font-size: 25px;
+ }
+
+ /* The typing effect */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    25% { border-color: rgb(0, 0, 0); }
+  }
+
+
+.social-links{
+    margin-left: 25px;
+    padding-bottom: 25px;
+}
+
+.social-links h3{
+    font-size: 20px;
+    font-family: 'Notosans', sans-serif;
+    margin-bottom: 0;
+}
+
+
+.social-links a{
+    text-decoration: underline;
+    color: black;
+    font-family: 'Notosans', sans-serif;
+    margin-left: 5px;
+}
+
+.social-links a:hover{
+    color: rgb(89, 166, 255, 0.8);
+    cursor: pointer;
+}
+
+
+.tech-stack{
+    padding-bottom: 25px;
+}
+
+
+.about strong{
+    font-weight: bolder
+}
+
+
+@media screen and (max-width: 768px) {
+   .about img{
+    display: none;
+   }
+}
