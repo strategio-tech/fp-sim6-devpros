@@ -55,7 +55,7 @@ https://user-images.githubusercontent.com/84250366/212957964-c7b6681a-ea7d-4be4-
 
 
 ## Getting started
-1. Clone this repository (only this branch)
+1. Clone this repository
 ```
 git clone https://github.com/strategio-tech/fp-sim6-devpros.git
 ```
