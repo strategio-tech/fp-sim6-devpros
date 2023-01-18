@@ -120,18 +120,6 @@ This repo comes configured with Github Actions. When you push to your main branc
 7. Push to your ```main``` branch! This will trigger the Github Action to build your Docker image and deploy your application to the Heroku container registry. Please note that the Github Action will automatically upgrade your production database with ```flask db upgrade```. However, it will not automatically seed your database. You must manually seed your production database if/when you so choose (see step 8).
 8. Attention! Please run this command only if you wish to seed your production database: ```heroku run -a HEROKU_APP_NAME flask seed all```
 
-## Helpful commands
-| Command                        | Purpose                                                                                                                                      |
-| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `pipenv shell`                 | Open your terminal in the virtual environment and be able to run flask commands without a prefix                                             |
-| `pipenv run`                   | Run a command from the context of the virtual environment without actually entering into it. You can use this as a prefix for flask commands |
-| `flask db upgrade`             | Check in with the database and run any needed migrations                                                                                     |
-| `flask db downgrade`           | Check in with the database and revert any needed migrations                                                                                  |
-| `flask seed all`               | Just a helpful syntax to run queries against the db to seed data. See the app/seeds folder for reference and more details                    |
-| `heroku login -i`              | Authenticate your heroku-cli using the command line. Drop the -i to authenticate via the browser                                             |
-| `heroku authorizations:create` | Once authenticated, use this to generate an Oauth token                                                                                      |
-| `heroku run -a <app name>`     | Run a command from within the deployed container on Heroku                                                                                   |
-
 
 [badge.React]: https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB
 [badge.Redux]: https://img.shields.io/badge/Redux-%23593d88.svg?logo=redux&logoColor=white
