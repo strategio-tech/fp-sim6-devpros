@@ -67,17 +67,23 @@ This app is deployed using **Heroku** & **Docker**.
 
 ## Getting started
 
-1. Clone this repository
+1. Clone this repository:
    ```sh
    git clone https://github.com/strategio-tech/fp-sim6-devpros.git
    ```
-2. Install dependencies
+2. Install dependencies:
    ```sh
    pipenv install -r requirements.txt
    ```
-3. Create a .env file based on the example with proper settings for your development environment
-4. Make sure the PostgreSql database connection URL is in the .env file
-5. Get into your pipenv, migrate your database, seed your database, and run your Flask app
+3. Create a `.env` file based on the example with proper settings for your development environment
+4. Rename `.flaskenv.example` to `.flaskenv` and add the following code:
+   ```ini
+   FLASK_APP=app
+   FLASK_ENV=development
+   ```
+   - `app` is the name of the file that contains the flask app and `development` enables development mode.
+5. Make sure the PostgreSql database connection URL is in the `.env` file.
+6. Get into your pipenv, migrate your database, seed your database, and run your Flask app:
    ```sh
    pipenv shell
    ```
@@ -90,7 +96,7 @@ This app is deployed using **Heroku** & **Docker**.
    ```sh
    flask run
    ```
-6. To run the React App in development, checkout the README inside the ```react-app``` directory.
+7. To run the React App in development, checkout the README inside the `react-app` directory.
 
 
 ## Deploy to Heroku
