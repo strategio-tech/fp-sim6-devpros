@@ -1,6 +1,5 @@
-run this command to copy the .flaskenv file to the root directory of your project:
 
-cp .flaskenv.example .flaskenv
+
 
 Now, you can run the following command to start the Flask server:
 
