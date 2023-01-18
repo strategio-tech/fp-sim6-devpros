@@ -17,6 +17,5 @@ You should see the following output:
 * Debugger PIN: 123-456-789
 
 
+
 Now, you can open your browser and go to http://localhost:<port>/ to see the Flask app running.
-
-
