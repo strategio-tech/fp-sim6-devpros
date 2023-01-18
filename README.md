@@ -1,123 +1,136 @@
 # Get After It
+
+![React][badge.React] ![Redux][badge.Redux] ![MaterialUI (Modals)][badge.materialUI]
+&nbsp;
+![Python][badge.Python] ![Flask][badge.Flask] ![Postgres][badge.Postgres] ![SQLAlchemy (ORM)][badge.SQLAlchemy]
+&nbsp;
+![RapidAPI (ExeciseDB)][badge.RapidAPI]
+&nbsp;
+![Heroku][badge.Heroku] ![Docker][badge.Docker]
+
 Get After It is a fullstack application created to make an intidimating lifestyle, simple. This app was made to take away some of the headaches of working out. Just create a workout plan, add workouts to the plan, and Get After It.
 
 ### Live link: https://get-after-it.herokuapp.com/
 
-## Technologies used:
+## Site features
 
-Front-End:
-- React
-- Redux(State Management)
-- CSS
-- JavaScript
-- MaterialUI(Modals)
-
-Back-End:
-- Python
-- Flask
-- SQLAlchemy(ORM)
-- PostgreSQL
-
-APIs:
-- RapidApi ExerciseDB
-
-This app is deployed using Heroku & Docker.
-
-## Site Features:
-### Workout Plans
-- Users have full CRUD capabilities on Workout Plans. Meaning, a user can Create a Workout Plan and Delete their Workout Plans.
-
-### Workouts
-- Users have full CRUD capabilities on RSVPs. Meaning, a user can add a Workout to their Workout Plan and Delete their Workout from that plan.
-
-### Workout Filters
-- Users can filter workouts by equipment. This filter was implemented on the Frontend.
-
-
-## Features to be implemented:
-- Progress tracker - going to allow users to keep notes on their progress per workout.
-
-
-## Main Feed
 https://user-images.githubusercontent.com/84250366/212957704-af7fcb6b-1d59-4dd6-9078-3991ae09a26b.mov
 
-## Filter Through Workouts
-https://user-images.githubusercontent.com/84250366/212957782-cbcbd550-3033-4732-9295-76a869eb8085.mov
+### Workout plans
 
-## Create Workout Plan
-https://user-images.githubusercontent.com/84250366/212957847-ea90b3dd-d503-42ce-858d-59c2a4c7e6bb.mov
+<details>
+  <summary>Users have full CRUD capabilities on Workout Plans. Meaning, a user can Create a Workout Plan and Delete their Workout Plans. <strong><em>Click here for video.</em></strong></summary>
 
-## Add Workout To Plan
-https://user-images.githubusercontent.com/84250366/212957897-3c2f06b6-ca5e-4678-9d9f-3de06642d7ba.mov
+  #### Create Workout Plan
+  https://user-images.githubusercontent.com/84250366/212957847-ea90b3dd-d503-42ce-858d-59c2a4c7e6bb.mov
+</details>
 
-## View Workout Plans
-https://user-images.githubusercontent.com/84250366/212957964-c7b6681a-ea7d-4be4-b4e6-7413658e4d9f.mov
+### Workouts
 
+<details>
+  <summary>Users have full CRUD capabilities on RSVPs. Meaning, a user can add a Workout to their Workout Plan and Delete their Workout from that plan.</summary>
+
+  #### View Workout Plans
+  https://user-images.githubusercontent.com/84250366/212957964-c7b6681a-ea7d-4be4-b4e6-7413658e4d9f.mov
+  
+  #### Add Workout To Plan
+  https://user-images.githubusercontent.com/84250366/212957897-3c2f06b6-ca5e-4678-9d9f-3de06642d7ba.mov
+</details>
+
+### Workout filters
+
+<details>
+  <summary>Users can filter workouts by equipment. This filter was implemented on the Frontend.</summary>
+
+  #### Filter Through Workouts
+  https://user-images.githubusercontent.com/84250366/212957782-cbcbd550-3033-4732-9295-76a869eb8085.mov
+</details>
+
+## Features to be implemented
+
+- **Progress tracker:** allows users to keep notes on their progress per workout.
+
+## Technologies used
+
+- **Front-End:** 
+  - React, Redux (State Management), CSS, JavaScript, MaterialUI (Modals)
+- **Back-End:** 
+  - Python, Flask, SQLAlchemy (ORM), PostgreSQL
+- **APIs:** 
+  - RapidApi (ExerciseDB)
+
+This app is deployed using **Heroku** & **Docker**.
+
+## Architectural diagram
+
+![Diagram](https://user-images.githubusercontent.com/66280594/213267777-7a56e978-48ef-4c4c-b23b-749eebdfcab1.png)
 
 ## Getting started
-1. Clone this repository
-```
-git clone https://github.com/strategio-tech/fp-sim6-devpros.git
-```
-2. Install dependencies
-```
-pipenv install -r requirements.txt
-```
-3. Create a .env file based on the example with proper settings for your development environment
-4. Make sure the PostgreSql database connection URL is in the .env file
-5. Get into your pipenv, migrate your database, seed your database, and run your Flask app
-```
-pipenv shell
-```
-```
-flask db upgrade
-```
-```
-flask seed all
-```
-```
-flask run
-```
-6. To run the React App in development, checkout the README inside the ```react-app``` directory.
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/strategio-tech/fp-sim6-devpros.git
+   ```
+2. Install dependencies:
+   ```sh
+   pipenv install -r requirements.txt
+   ```
+3. Create a `.env` file based on the example with proper settings for your development environment
+4. Rename `.flaskenv.example` to `.flaskenv` and add the following code:
+   ```ini
+   FLASK_APP=app
+   FLASK_ENV=development
+   ```
+   - `app` is the name of the file that contains the flask app and `development` enables development mode.
+5. Make sure the PostgreSql database connection URL is in the `.env` file.
+6. Get into your pipenv, migrate your database, seed your database, and run your Flask app:
+   ```sh
+   pipenv shell
+   ```
+   ```sh
+   flask db upgrade
+   ```
+   ```sh
+   flask seed all
+   ```
+   ```sh
+   flask run
+   ```
+7. To run the React App in development, checkout the README inside the `react-app` directory.
 
 
 ## Deploy to Heroku
+
 This repo comes configured with Github Actions. When you push to your main branch, Github will automatically pull your code, package and push it to Heroku, and then release the new image and run db migrations.
 
 1. Write your Dockerfile. In order for the Github action to work effectively, it must have a configured Dockerfile. Follow the comments found in the Dockerfile to write your own!
-
 2. Create a new project on Heroku.
-
 3. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres".
-
 4. Configure production environment variables. In your Heroku app settings -> config variables you should have two environment variables set:
-
-| Key |	Value |
-| --- | --- |
-| DATABASE_URL | Autogenerated when adding postgres to Heroku app |
-| SECRET_KEY |	Random string full of entropy |
-
+   | Key          | Value                                            |
+   | ------------ | ------------------------------------------------ |
+   | DATABASE_URL | Autogenerated when adding postgres to Heroku app |
+   | SECRET_KEY   | Random string full of entropy                    |
 5. Generate a Heroku OAuth token for your Github Action. To do so, log in to Heroku via your command line with ``` heroku login ```. Once you are logged in, run ``` heroku authorizations:create ```. Copy the GUID value for the Token key.
-
 6. In your Github Actions Secrets you should have two environment variables set. You can set these variables via your Github repository settings -> secrets -> actions. Click "New respository secret" to create each of the following variables:
-
-| Key |	Value |
-| --- | --- |
-| HEROKU_API_KEY |	Heroku Oauth Token (from step 6) |
-| HEROKU_APP_NAME |	Heroku app name |
-
+   | Key             | Value                            |
+   | --------------- | -------------------------------- |
+   | HEROKU_API_KEY  | Heroku Oauth Token (from step 6) |
+   | HEROKU_APP_NAME | Heroku app name                  |
 7. Push to your ```main``` branch! This will trigger the Github Action to build your Docker image and deploy your application to the Heroku container registry. Please note that the Github Action will automatically upgrade your production database with ```flask db upgrade```. However, it will not automatically seed your database. You must manually seed your production database if/when you so choose (see step 8).
-
 8. Attention! Please run this command only if you wish to seed your production database: ```heroku run -a HEROKU_APP_NAME flask seed all```
 
-## Helpful commands
-| Command |	Purpose |
-| --- | --- |
-| pipenv shell |	Open your terminal in the virtual environment and be able to run flask commands without a prefix |
-| pipenv run |	Run a command from the context of the virtual environment without actually entering into it. You can use this as a prefix for flask commands |
-| flask db upgrade |	Check in with the database and run any needed migrations |
-| flask db downgrade |	Check in with the database and revert any needed migrations |
-| flask seed all |	Just a helpful syntax to run queries against the db to seed data. See the app/seeds folder for reference and more details |
-| heroku login -i |	Authenticate your heroku-cli using the command line. Drop the -i to authenticate via the browser |
-| heroku authorizations:create | Once authenticated, use this to generate an Oauth token |
-| heroku run -a <app name> |	Run a command from within the deployed container on Heroku |
+
+[badge.React]: https://img.shields.io/badge/React-%2320232a.svg?logo=react&logoColor=%2361DAFB
+[badge.Redux]: https://img.shields.io/badge/Redux-%23593d88.svg?logo=redux&logoColor=white
+[badge.CSS3]: https://img.shields.io/badge/CSS-%231572B6.svg?logo=css3&logoColor=white
+[badge.JavaScript]: https://img.shields.io/badge/JavaScript-%23323330.svg?logo=javascript&logoColor=%23F7DF1E
+[badge.Python]: https://img.shields.io/badge/Python-3670A0?logo=python&logoColor=ffdd54
+[badge.Flask]: https://img.shields.io/badge/Flask-%23000.svg?logo=flask&logoColor=white
+[badge.Postgres]: https://img.shields.io/badge/Postgres-%23316192.svg?logo=postgresql&logoColor=white
+[badge.Docker]: https://img.shields.io/badge/Docker-%230db7ed.svg?logo=docker&logoColor=white
+[badge.Heroku]: https://img.shields.io/badge/Heroku-%23430098.svg?logo=heroku&logoColor=white
+[badge.SQLAlchemy]: https://img.shields.io/badge/SQLAlchemy-CD2103.svg
+
+[badge.MaterialUI]: https://img.shields.io/badge/MaterialUI-FFF.svg?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHZlcnNpb249IjEuMSIgdmlld0JveD0iMCAwIDE1LjM2IDE1LjM1NyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KIDxwYXRoIGQ9Im0wIDEuNTgxOHY2LjY1MDZsMS45MiAxLjEwODZ2LTQuNDMzOWwzLjg0IDIuMjE3MiAzLjg0LTIuMjE3MnYyLjIxNzJsLTMuODQgMi4yMTY3djIuMjE3MmwzLjg0IDIuMjE2NyA1Ljc2LTMuMzI1M3YtNC40MzM5bC0xLjkyIDEuMTA4NnYyLjIxNjdsLTMuODQgMi4yMTcyLTEuOTItMS4xMDg2IDMuODQtMi4yMTcydi02LjY1MDZsLTUuNzYgMy4zMjUzLTUuNzYtMy4zMjUzem0xNS4zNiAwLTEuOTIgMS4xMDg2djIuMjE2N2wxLjkyLTEuMTA4NnYtMi4yMTY3eiIgZmlsbD0iIzAwYjBmZiIgc3Ryb2tlLXdpZHRoPSIuMDI1NiIvPgo8L3N2Zz4K
+[badge.RapidAPI]: https://img.shields.io/badge/RapidAPI-FFF.svg?logo=data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iQXJ0d29yayIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA2NCA2NCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+PG1ldGFkYXRhPjxyZGY6UkRGPjxjYzpXb3JrIHJkZjphYm91dD0iIj48ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD48ZGM6dHlwZSByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIi8+PC9jYzpXb3JrPjwvcmRmOlJERj48L21ldGFkYXRhPiA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiAuc3Qwe2ZpbGw6IzAwNTVEOTt9IC5zdDF7ZmlsbDojMDgxNDc3O30gPC9zdHlsZT4gPHBhdGggY2xhc3M9InN0MCIgZD0ibTQyLjcwMyA0Mi4xMTVjLTAuNTY2NzUtMC4xNzQzOS0wLjYxMDM1LTAuOTU5MTIgMC4wNDM1OTktMS4yMjA3IDExLjI0OC01LjMxODcgMTAuNTA3LTE3LjM5NSAxMC41MDctMTcuMzk1LTAuMDQzNTk2LTEyLjI1MS05LjAyNDQtMjMuNTg2LTIzLjQ5OC0yMy40OTgtMTYuMTMxIDAuMDg3MTkyLTI1LjgwOSAxMi43NzQtMjUuNzIyIDI3Ljc3MSAwLjEzMDc5IDI2LjI0NSAyMC4xODUgMzYuMjcyIDI2LjQxOSAzNi4yMjlsLTAuMDQzNi0xMC40MmMwLTEuNjU2NyAwLTIuOTY0NSAxLjAwMjctMi45NjQ1IDAgMCA2LjQ1MjIgNi40NTIyIDEzLjYwMiA2LjQ1MjIgMTEuMTYxLTAuMDQzNiAxNC45NTQtOS40MTY4IDE0Ljk1NC05LjQxNjh6bS0xMi45MDUtOC4wMjE3Yy01LjcxMTEgMC4wNDM1OS0xMC4zMzItNC41Nzc2LTEwLjM3Ni0xMC4yODktMC4wNDM2LTUuNzExMSA0LjU3NzYtMTAuMzMyIDEwLjI4OS0xMC4zNzYgNS43MTExLTAuMDQzNiAxMC4zMzIgNC41Nzc2IDEwLjM3NiAxMC4yODkgMCA1LjcxMTEtNC41Nzc2IDEwLjMzMi0xMC4yODkgMTAuMzc2IiBmaWxsPSIjMDA1NWQ5IiBzdHJva2Utd2lkdGg9Ii40MzU5NiIvPiAgPC9zdmc+Cg==
