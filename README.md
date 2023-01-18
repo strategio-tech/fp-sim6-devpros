@@ -27,8 +27,6 @@ https://user-images.githubusercontent.com/84250366/212957704-af7fcb6b-1d59-4dd6-
 
 ### Workouts
 
-
-
 <details>
   <summary>Users have full CRUD capabilities on RSVPs. Meaning, a user can add a Workout to their Workout Plan and Delete their Workout from that plan.</summary>
 
@@ -48,17 +46,20 @@ https://user-images.githubusercontent.com/84250366/212957704-af7fcb6b-1d59-4dd6-
   https://user-images.githubusercontent.com/84250366/212957782-cbcbd550-3033-4732-9295-76a869eb8085.mov
 </details>
 
-## Features to be implemented:
+## Features to be implemented
 
 - **Progress tracker:** allows users to keep notes on their progress per workout.
 
 ## Technologies used
 
-- **Front-End:** React, Redux (State Management), CSS, JavaScript, MaterialUI (Modals)
-- **Back-End:** Python, Flask, SQLAlchemy (ORM), PostgreSQL
-- **APIs:** RapidApi (ExerciseDB)
+- **Front-End:** 
+  - React, Redux (State Management), CSS, JavaScript, MaterialUI (Modals)
+- **Back-End:** 
+  - Python, Flask, SQLAlchemy (ORM), PostgreSQL
+- **APIs:** 
+  - RapidApi (ExerciseDB)
 
-This app is deployed using Heroku & Docker.
+This app is deployed using **Heroku** & **Docker**.
 
 ## Architectural diagram
 
