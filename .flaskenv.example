@@ -1,0 +1,20 @@
+
+
+
+Now, you can run the following command to start the Flask server:
+
+flask run
+
+You should see the following output:
+
+* Serving Flask app "app" (lazy loading)
+* Environment: development
+* Debug mode: on
+* Running on http://
+* Restarting with stat
+* Debugger is active!
+* Debugger PIN: 123-456-789
+
+
+
+Now, you can open your browser and go to http://localhost:<port>/ to see the Flask app running.
